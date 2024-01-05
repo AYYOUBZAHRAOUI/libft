@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:22:13 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/05 18:17:09 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/05 21:57:47 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void *ft_memmove(void *dst, const void *src, unsigned int len);
 int ft_strlcpy(char * dst, const char * src, unsigned int dstsize); // ft_strlen()
 int ft_strlcat(char * dst, const char * src, unsigned int dstsize);
 int ft_atoi(const char *str);
-char *ft_strnstr(const char *haystack, const char *needle, unsigned int len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *s, int c);
 int ft_memcmp(const void *s1, const void *s2, unsigned int n);
 void	*ft_memchr(const void *s, int c, unsigned int n);
