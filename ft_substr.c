@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:02:17 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/04 19:46:45 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:04:08 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	if (start + len > i)
 		return (ft_strdup((s + start)));
 	else
-		p = calloc(len + 1, 1);
+		p = ft_calloc(len + 1, 1);
 		if (p == NULL)
 			return (NULL);
 		else

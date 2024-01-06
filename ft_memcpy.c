@@ -6,11 +6,13 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:31 by ayzahrao          #+#    #+#             */
-/*   Updated: 2023/12/27 17:21:32 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:17:24 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, unsigned int len)
+#include "libft.h"
+
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t len)
 {
 	unsigned char *x;
 	unsigned char *y;
@@ -18,6 +20,8 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, unsigned int len)
 	x = (unsigned char *)dst;
 	y = (unsigned char *)src;
 	i = 0;
+	if (y == NULL && x == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		*(x + i) = *(y + i);

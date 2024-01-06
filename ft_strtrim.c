@@ -1,45 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/06 15:57:03 by ayzahrao          #+#    #+#             */
+/*   Updated: 2024/01/06 15:57:04 by ayzahrao         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 char *ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int i;
 	unsigned int j;
 	unsigned int k;
-	unsigned int h;
-	char *p;
-	if (!s1 || !set)
+
+	if (s1 == NULL || set == NULL)
 	{
-		if (!s1)
+		if (s1 == NULL)
 			return (NULL);
 		else
 			return (ft_strdup(s1));
 	}
-	i = ft_strlen(s1);
-	j = ft_strlen(set);
-	k = 0;
-	h = i;
-	if (i > j && j > 0)
+	j = 0;
+	while (s1[j])
 	{
-		while (k < i) // if s1 less than set retrun s1;
-		{
-			if (ft_strncmp(s1 + k, set, j-1) != 0)
-				break;
-			else
-				k = k + j;
-		}
-		while (i - k > k)
-		{
-			if (ft_strncmp(s1 + h - j, set, j-1) != 0)
-				break;
-			else
-				h = h - j;
-		}
-		p = (char *)ft_calloc(h - k + 1, 1);
-		if (p == NULL)
-			return (NULL);
-		return ((char *)ft_memcpy(p, s1 + k, h - k));
+		if (!ft_strchr(set, s1[j]) )
+			break;
+		j++;
 	}
-	else
+	k = ft_strlen(s1);
+	while (k-- > 0 && k > j)
 	{
-		return (ft_strdup(s1));
+		if (!ft_strrchr(set, s1[k]))
+			break;
 	}
+	return (ft_substr(s1, j, k - j + 1));
 }
+	

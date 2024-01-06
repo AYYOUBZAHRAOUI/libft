@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:22:13 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/05 21:57:47 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:17:45 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_toupper(int c);
 int	ft_tolower(int c); // ft_strlen()
 int	ft_strncmp(const char *s1, const char * s2, unsigned int n);
 void	*ft_memset(void *b, int c, unsigned int n);
-void	*ft_memcpy(void *dst, const void *src, unsigned int len);
+void	*ft_memcpy(void *dst, const void *src, size_t len);
 void *ft_memmove(void *dst, const void *src, unsigned int len);
 int ft_strlcpy(char * dst, const char * src, unsigned int dstsize); // ft_strlen()
 int ft_strlcat(char * dst, const char * src, unsigned int dstsize);

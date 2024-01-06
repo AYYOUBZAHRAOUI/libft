@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:34 by ayzahrao          #+#    #+#             */
-/*   Updated: 2023/12/27 17:21:35 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/05 23:26:56 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void *ft_memmove(void *dst, const void *src, unsigned int len)
 		unsigned char *y;
 		x = (unsigned char *)dst;
 		y = (unsigned char *)src;
+		if (y == NULL && x == NULL)
+			return (NULL);
 		while (len)
 		{
 			--len;
