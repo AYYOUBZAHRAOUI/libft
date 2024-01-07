@@ -6,13 +6,12 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:39 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/03 15:57:20 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/07 17:59:59 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char *ft_strchr(const char *s, int c)
 {
-	
 	while (*s != '\0')
 	{
 		if (*s == (char)c)
