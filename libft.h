@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:22:13 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/12 19:59:12 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/13 19:12:21 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
 char *ft_itoa(int n);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
