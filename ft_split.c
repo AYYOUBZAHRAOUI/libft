@@ -6,11 +6,12 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 17:04:42 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/07 18:35:52 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/13 16:15:32 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+
 
 char **setfunc(char **p,const char *s, char c)
 {
@@ -28,9 +29,12 @@ char **setfunc(char **p,const char *s, char c)
 		{
 			p[k] = ft_substr(s, i, j);
 			if (p[k] == NULL)
-			{
+			{	
+				i = 0;
+				while (i < k)
+					free(p[i++]);
 				free(p);
-				return NULL;
+				return (NULL);
 			}
 			k++;
 			i += j;
@@ -49,7 +53,7 @@ char **ft_split(char const *s, char c)
 	unsigned int element;
 	char **p;
 	
-	if (NULL == s)
+	if (s == NULL)
 		return (NULL);
 	i = 0;
 	element = 0;

@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/27 17:21:39 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/07 20:39:51 by ayzahrao         ###   ########.fr       */
+/*   Created: 2024/01/07 20:40:25 by ayzahrao          #+#    #+#             */
+/*   Updated: 2024/01/13 15:24:04 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char *ft_itoa(int n)
 {
-	while (*s != '\0')
+	unsigned int i;
+	long int a = n;
+	long int c;
+	int b;
+	char *p;
+	b = -1;
+	i = 1;
+	if (a < 0 && i++)
+		a *= b++;
+	c = a;
+	while ((a / 10) > 0 && i++)
+		a /= 10;
+	p = (char *)ft_calloc(i + 1, 1);
+	if (p == NULL)
+		return (NULL);
+	while ((c / 10) > 0)
 	{
-		if (*s == (char)c)
-			return (char *)s;
-		else 
-			s++;
-	}	
-	if ((char)c == '\0')
-		return (char *)s;
-	else
-		return (0);
+		p[--i] = (c % 10) + '0';
+		c /= 10;
+	}
+	p[--i] = c + '0';
+	if (!b)
+		p[--i] = '-';
+	return (p);
 }
