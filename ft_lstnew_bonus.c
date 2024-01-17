@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/05 17:42:23 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/17 23:22:42 by ayzahrao         ###   ########.fr       */
+/*   Created: 2024/01/16 05:38:41 by ayzahrao          #+#    #+#             */
+/*   Updated: 2024/01/16 06:29:28 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list *ft_lstnew(void *content)
 {
-	size_t l;
-
-	l = 0;
-	while (*s++)
-		l++;
-	return (l);
+	t_list *head;
+	head = malloc(16);
+	if(head == NULL)
+		return (NULL);
+	head -> content = content;
+	head -> next = NULL;
+	return (head);
 }
