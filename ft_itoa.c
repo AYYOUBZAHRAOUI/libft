@@ -6,36 +6,54 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 20:40:25 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/13 15:24:04 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 04:36:34 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_itoa(int n)
+unsigned int	allocation_size(int n)
 {
-	unsigned int i;
-	long int a = n;
-	long int c;
-	int b;
-	char *p;
-	b = -1;
+	unsigned int	i;
+	long int		a;
+
+	a = n;
 	i = 1;
-	if (a < 0 && i++)
-		a *= b++;
-	c = a;
-	while ((a / 10) > 0 && i++)
+	if (a < 0)
+	{
+		a *= -1;
+		i++;
+	}
+	while ((a / 10) > 0)
+	{
 		a /= 10;
-	p = (char *)ft_calloc(i + 1, 1);
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int			b;
+	int			size;
+	char		*p;
+	long int	a;
+
+	a = n;
+	size = allocation_size(n);
+	p = (char *)ft_calloc(size + 1, 1);
 	if (p == NULL)
 		return (NULL);
-	while ((c / 10) > 0)
+	b = -1; 
+	if (a < 0)
+		a *= b++;
+	while ((a / 10) > 0)
 	{
-		p[--i] = (c % 10) + '0';
-		c /= 10;
+		p[--size] = (a % 10) + '0';
+		a /= 10;
 	}
-	p[--i] = c + '0';
+	p[--size] = a + '0';
 	if (!b)
-		p[--i] = '-';
+		p[--size] = '-';
 	return (p);
 }

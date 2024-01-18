@@ -6,11 +6,11 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:22:07 by ayzahrao          #+#    #+#             */
-/*   Updated: 2023/12/27 17:22:08 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:33:45 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return ((c - 'A') + 'a');

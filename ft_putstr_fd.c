@@ -6,14 +6,16 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 03:35:45 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/14 03:41:44 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:06:24 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putstr_fd(char *s, int fd)
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int i;
+	unsigned int	i;
+
 	i = 0;
 	while (s[i])
 		write(fd, (s + i++), 1);

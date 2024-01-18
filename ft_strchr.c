@@ -6,21 +6,21 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:39 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/07 20:39:51 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:18:11 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
 		if (*s == (char)c)
-			return (char *)s;
+			return ((char *)s);
 		else 
 			s++;
-	}	
+	}
 	if ((char)c == '\0')
-		return (char *)s;
+		return ((char *)s);
 	else
 		return (0);
 }

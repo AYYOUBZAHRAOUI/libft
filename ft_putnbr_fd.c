@@ -6,16 +6,18 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 03:58:38 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/14 04:31:55 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:06:02 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putnbr_fd(int n, int fd)
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	long int x;
+	long int	x;
+	char		p[1];
+
 	x = n;
-	char p[1];
 	if (x < 0)
 	{
 		write(fd, "-", 1);

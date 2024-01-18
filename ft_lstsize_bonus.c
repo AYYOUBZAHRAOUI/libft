@@ -6,18 +6,20 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 06:52:24 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/16 06:59:33 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 00:54:48 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_lstsize(t_list *lst)
+
+int	ft_lstsize(t_list *lst)
 {
-	int i;
-	i = 0;
-	while (lst != NULL && ++i)
+	int	size;
+
+	size = 0;
+	while (lst != NULL && ++size)
 	{
 		lst = lst -> next;
 	}
-	return (i);
+	return (size);
 }

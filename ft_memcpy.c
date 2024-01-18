@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:31 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/05 23:17:24 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 06:28:44 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t len)
 {
-	unsigned char *x;
-	unsigned char *y;
-	unsigned int i;
+	unsigned char	*x;
+	unsigned char	*y;
+	size_t			i;
+
 	x = (unsigned char *)dst;
 	y = (unsigned char *)src;
 	i = 0;
@@ -25,7 +26,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t len)
 	while (i < len)
 	{
 		*(x + i) = *(y + i);
-		i++;		
+		i++;
 	}
 	return (dst);
 }

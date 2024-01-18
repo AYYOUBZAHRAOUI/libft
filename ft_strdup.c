@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:20:44 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/07 17:58:26 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:18:41 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int i;
-	int j;
-	char *p;
+	int		i;
+	int		j;
+	char	*p;
+
 	i = ft_strlen(s1);
 	j = 0;
 	p = (char *)ft_calloc(i + 1, 1);

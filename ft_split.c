@@ -6,18 +6,29 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 17:04:42 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/13 16:15:32 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 04:07:42 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-
-char **setfunc(char **p,const char *s, char c)
+void	*free_split(char **p)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	int	i;
+
+	i = 0;
+	while (p[i])
+		free(p[i++]);
+	free(p);
+	return (NULL);
+}
+
+char	**setfunc(char **p, const char *s, char c)
+{
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
+
 	i = 0;
 	k = 0;
 	while (s[i])
@@ -29,13 +40,7 @@ char **setfunc(char **p,const char *s, char c)
 		{
 			p[k] = ft_substr(s, i, j);
 			if (p[k] == NULL)
-			{	
-				i = 0;
-				while (i < k)
-					free(p[i++]);
-				free(p);
-				return (NULL);
-			}
+				return (free_split(p));
 			k++;
 			i += j;
 		}
@@ -46,25 +51,24 @@ char **setfunc(char **p,const char *s, char c)
 	return (p);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	unsigned int i;
-	unsigned int element;
-	char **p;
-	
+	unsigned int	i;
+	unsigned int	element;
+	char			**p;
+
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 	element = 0;
 	while (i < ft_strlen(s))
 	{
-		if (s[i] != c && (s[i + 1] == c ||  s[i + 1] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			element++;
-		i++;	
+		i++;
 	}
 	p = (char **)malloc(8 * (element + 1));
 	if (p == NULL)
-		return NULL;
+		return (NULL);
 	return (setfunc(p, s, c));
 }

@@ -6,14 +6,17 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:36 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/05 16:42:38 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 06:29:27 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *b, int c, unsigned int n)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t n)
 {
-	unsigned char *x;
-	unsigned int i;
+	unsigned char	*x;
+	size_t			i;
+
 	i = 0;
 	x = (unsigned char *)b;
 	while (i < n)

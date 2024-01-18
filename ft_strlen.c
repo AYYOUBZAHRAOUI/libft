@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 17:42:23 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/17 23:22:42 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 01:25:23 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t l;
+	size_t	l;
 
 	l = 0;
 	while (*s++)

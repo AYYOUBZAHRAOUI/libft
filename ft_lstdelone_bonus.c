@@ -6,12 +6,13 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 08:07:16 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/16 08:21:23 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/18 00:48:00 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst != NULL)
 	{
