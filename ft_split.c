@@ -6,13 +6,13 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 17:04:42 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 04:07:42 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 01:40:32 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*free_split(char **p)
+static void	*free_split(char **p)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ void	*free_split(char **p)
 	return (NULL);
 }
 
-char	**setfunc(char **p, const char *s, char c)
+static char	**setfunc(char **p, const char *s, char c)
 {
 	unsigned int	i;
 	unsigned int	j;

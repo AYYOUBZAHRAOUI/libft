@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 23:26:44 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 01:25:48 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 02:55:28 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*p;
 
 	i = 0;
+	if (s == NULL || f == NULL)
+	{
+		return (NULL);
+	}
 	j = ft_strlen(s);
 	p = ft_calloc(j + 1, 1);
 	if (p == NULL)

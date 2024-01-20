@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 08:07:16 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 00:48:00 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 03:14:13 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst != NULL)
+	if (lst != NULL && del != NULL)
 	{
 		if (lst->content != NULL)
 			del(lst->content);

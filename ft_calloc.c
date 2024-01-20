@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:09 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 00:22:45 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 05:02:56 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,22 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
+	size_t	total;
 
-	if (count > 2147483648 || size > 2147483648)
+	if (count == 0 || size == 0)
+	{
+		p = malloc(size * count);
+		if (p == NULL)
+			return (NULL);
+		ft_bzero(p, size * count);
+		return (p);
+	}
+	total = count * size;
+	if (total / count != size)
 		return (NULL);
-	p = malloc(count * size);
+	p = malloc(total);
 	if (p == NULL)
 		return (NULL);
-	ft_bzero(p, count * size);
+	ft_bzero(p, total);
 	return (p);
 }

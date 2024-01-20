@@ -6,7 +6,7 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 03:35:45 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 01:06:24 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 02:59:36 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char *s, int fd)
 	unsigned int	i;
 
 	i = 0;
-	while (s[i])
+	while (s != NULL && s[i])
 		write(fd, (s + i++), 1);
 }

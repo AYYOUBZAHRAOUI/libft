@@ -6,13 +6,13 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 20:40:25 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 04:36:34 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 01:39:24 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	allocation_size(int n)
+static unsigned int	allocation_size(int n)
 {
 	unsigned int	i;
 	long int		a;

@@ -6,13 +6,13 @@
 /*   By: ayzahrao <ayzahrao@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:21:31 by ayzahrao          #+#    #+#             */
-/*   Updated: 2024/01/18 06:28:44 by ayzahrao         ###   ########.fr       */
+/*   Updated: 2024/01/20 01:42:29 by ayzahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	unsigned char	*x;
 	unsigned char	*y;
