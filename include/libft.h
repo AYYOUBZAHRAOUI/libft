@@ -16,6 +16,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+#ifndef BUFFER_SIZE
+#define BUFFER_SIZE 10
+#endif
+
+char 	*ft_get_next_line(int fd);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);

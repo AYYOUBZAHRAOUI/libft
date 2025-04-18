@@ -63,7 +63,8 @@ OBJ_DIR = obj
 # 			src/ft_strtrim.c \
 # 			src/ft_substr.c \
 # 			src/ft_tolower.c \
-# 			src/ft_toupper.c
+# 			src/ft_toupper.c \
+#			src/ft_get_next_line.c
 
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 
